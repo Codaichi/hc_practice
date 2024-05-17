@@ -125,13 +125,12 @@ footer {
     width: 960px;
     padding: 4%;
     margin: 0 auto;
-    background-color: azure;
   }
 
   .self_introduction_content_img {
     display: flex;
     align-items: center;
-    background-color: antiquewhite;
+
   }
 
   .self_introduction .name {
