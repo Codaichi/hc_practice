@@ -15,6 +15,7 @@ body {
   padding: 4%;
   margin-top: 20px;
   margin-bottom: 20px;
+  align-items: center;
 }
 
 .header h2 {
@@ -30,7 +31,8 @@ body {
   display: flex;
   list-style-type: none;
   justify-content: space-between;
-  width: 45%;
+  gap: 0 25px;
+  align-items: center;
 }
 
 .header ul li {
@@ -139,7 +141,6 @@ footer {
 
   .profile_detail {
     display: flex;
-    justify-content: space-between;
     gap: 0 10px;
   }
 }
