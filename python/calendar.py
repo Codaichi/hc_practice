@@ -6,7 +6,7 @@ import sys
 def get_date():
     # Return current month if No argument provided
     if len(sys.argv) <= 1:
-        return datetime.now()
+        return datetime.now().replace(days=1)
 
     # Displayed an error, if less than 2 command line arguments or the first argument is not "-m"
     if len(sys.argv) <= 2 or sys.argv[1] != "-m":
