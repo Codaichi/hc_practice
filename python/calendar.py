@@ -3,7 +3,7 @@ import sys
 
 
 # Checking shared argument matches the format of the month
-def get_month():
+def get_date():
     # Return current month if No argument provided
     if len(sys.argv) <= 1:
         return datetime.now()
@@ -28,7 +28,7 @@ def get_month():
     return datetime(datetime.now().year, month, 1)
 
 
-d = get_month()
+d = get_date()
 days_of_week = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"]
 
 # Calculating the number of days in the month
