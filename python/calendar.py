@@ -6,7 +6,7 @@ import sys
 def get_date():
     # Return current month if No argument provided
     if len(sys.argv) <= 1:
-        return datetime.now().replace(days=1)
+        return datetime.now().replace(day=1)
 
     # Displayed an error, if less than 2 command line arguments or the first argument is not "-m"
     if len(sys.argv) <= 2 or sys.argv[1] != "-m":
@@ -28,26 +28,24 @@ def get_date():
     return datetime(datetime.now().year, month, 1)
 
 
-d = get_date()
+first_day_of_month = get_date()
 days_of_week = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"]
 
 # Calculating the number of days in the month
-if d.month == 12:
-    first_day_next_month = datetime(d.year + 1, 1, 1)
+if first_day_of_month.month == 12:
+    first_day_next_month = datetime(first_day_of_month.year + 1, 1, 1)
 else:
-    first_day_next_month = datetime(d.year, d.month + 1, 1)
+    first_day_next_month = datetime(first_day_of_month.year, first_day_of_month.month + 1, 1)
 
 last_day_of_month = first_day_next_month - timedelta(days=1)
-first_day_of_month = d.replace(day=1)
-days_count = (last_day_of_month - first_day_of_month).days + 1
 start_date = first_day_of_month.weekday()
 
 date_list = []
-for i in range(days_count):
+for i in range(last_day_of_month.day):
     date_list.append(first_day_of_month + timedelta(days=i))
 
 # formatting and printing the calendar
-print(d.strftime("   %B  %Y   "))
+print(first_day_of_month.strftime("   %B  %Y   "))
 print(" ".join(days_of_week))
 print("   " * start_date, end="")
 
