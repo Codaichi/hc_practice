@@ -1,4 +1,4 @@
-class Purchase:  
+class VendingMachine:  
   # sales amount
   def __init__(self):
     self._sales = 0

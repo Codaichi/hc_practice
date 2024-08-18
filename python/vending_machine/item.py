@@ -1,4 +1,4 @@
-class StockItem:
+class Drink:
   def __init__(self, name, price, stock):
     self._name = name
     self._price = price
@@ -44,7 +44,7 @@ class StockItem:
     self._stock = value
 
   
-item1 = StockItem("Pepsi", 150, 5)
-item2 = StockItem("Monster", 230, 5)
-item3 = StockItem("Irohasu", 120, 5)
+item1 = Drink("Pepsi", 150, 5)
+item2 = Drink("Monster", 230, 5)
+item3 = Drink("Irohasu", 120, 5)
 items = [item1, item2, item3]

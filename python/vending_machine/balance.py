@@ -1,4 +1,4 @@
-class Balance:
+class Suica:
   def __init__(self):
     self._balance = initial_balance
   

@@ -1,11 +1,11 @@
 # type: ignore
 import sys
-from balance import Balance
-from item import items, StockItem
-from purchase import Purchase 
+from balance import Suica
+from item import items, Drink
+from purchase import VendingMachine 
 
-new_suica = Balance()
-vending_machine = Purchase()
+new_suica = Suica()
+vending_machine = VendingMachine()
 
 print(f"Now, you have : {new_suica.get_balance()} JPY")
 
