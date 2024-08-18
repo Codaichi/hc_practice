@@ -5,7 +5,7 @@ from item import items, Drink
 from purchase import VendingMachine 
 
 new_suica = Suica()
-vending_machine = VendingMachine()
+vending_machine = VendingMachine(items)
 
 print(f"Now, you have : {new_suica.get_balance()} JPY")
 
@@ -19,7 +19,7 @@ print(f"after the charge {new_amount}, your balance is {new_suica.get_balance()}
 print(f"------------------------\nStock info :")
 
 for idx, item in enumerate(items):
-  print(f"{idx} : {item.display_info()}")
+  print(f"{idx} : {vending_machine.display_info(item)}")
 
 print("------------------------")
 
@@ -51,7 +51,7 @@ except ValueError as e:
 print(f"Your balance is {new_suica.get_balance()} JPY")
 print(f"------------------------\nUpdated Stock info:")
 for idx, item in enumerate(items):
-   print(f"{idx}: {item.display_info()}")
+   print(f"{idx}: {vending_machine.display_info(item)}")
 
 # Add stock
 print(f"------------------------\nPlease add Stocks")
@@ -67,7 +67,7 @@ print(f"You're adding stock to {selected_restock_item.name}")
 restock_count = int(input("Enter the number to restock :"))
 
 try:
-    selected_restock_item.add_stock(restock_count)
+    vending_machine.add_stock(selected_restock_item, restock_count)
     print(f"Succesfully added {restock_count} to {selected_restock_item.name}'s stock")
 except ValueError as e:
     print(f"Error : {e}")
@@ -77,6 +77,6 @@ except ValueError as e:
 print(f"------------------------\nHere are new stock info :")
 
 for idx, item in enumerate(items):
-  print(f"{idx} : {item.display_info()}")
+  print(f"{idx} : {vending_machine.display_info(item)}")
 
 print(f"------------------------\nVending Machine sales: {vending_machine.get_sales()} JPY")
