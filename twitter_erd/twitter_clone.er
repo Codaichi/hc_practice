@@ -23,7 +23,7 @@
   *id {label: "bigint, not null"}
   sender_id {label: "bigint, not null, FK(users)"}
   receiver_id {label: "bigint, not null, FK(users)"}
-  dm_content {label: "varchar, not null" }
+  content {label: "varchar, not null" }
   created_at { label: "datatime, not null"}
   updated_at { label: "datatime, not null"}
 
