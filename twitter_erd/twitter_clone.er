@@ -12,15 +12,10 @@
   created_at { label: "datatime, not null"}
   updated_at { label: "datatime, not null"}
 
-[followers] {bgcolor: "#92bbfc"}
+[follows] {bgcolor: "#92bbfc"}
   *id {label: "bigint, not null"}
   follower_id {label: "bigint, not null, FK(users)"}
-  created_at { label: "datatime, not null"}
-  updated_at { label: "datatime, not null"}
-
-[followees] {bgcolor: "#92bbfc"}
-  *id {label: "bigint, not null"}
-  followee_id {label: "bigint, not null, FK(users)"}
+  followee_id {label: "bigint, not null, FK(users)"} 
   created_at { label: "datatime, not null"}
   updated_at { label: "datatime, not null"}
 
